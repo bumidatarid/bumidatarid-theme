@@ -112,4 +112,12 @@ pre.prettyprinted {
 ￼    width: 100%;
 ￼    z-index: 3;
 }
+
+.main-navigation a {
+padding: 1em 1em;
+}
+
+.main-navigation ul ul a {
+padding: 0.25em 1.25em;
+}
 }
