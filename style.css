@@ -99,6 +99,11 @@ pre.prettyprinted {
 }
 
 
+.post-thumbnail {
+	margin-left: -2em;
+	margin-right: -2em;
+}
+
 @media screen and (min-width: 48em) {
 .navigation-top {
 ￼    bottom: 0;
@@ -120,4 +125,10 @@ padding: 1em 1em;
 .main-navigation ul ul a {
 padding: 0.25em 1.25em;
 }
+
+.post-thumbnail {
+	margin-left: 0;
+	margin-right: 0;
+}
+
 }
