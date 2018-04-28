@@ -113,6 +113,10 @@ pre.prettyprinted {
 	opacity: 1 !important;
 }
 
+.widget_custom_html {
+	padding-bottom: 0;
+}
+
 @media screen and (min-width: 48em) {
 .navigation-top {
 ￼    bottom: 0;
