@@ -22,12 +22,12 @@
 		<?php
 		if ( 'post' === get_post_type() ) {
 			echo '<div class="entry-meta">';
-			if ( is_single() ) {
-				twentyseventeen_posted_on();
-			} else {
-				echo twentyseventeen_time_link();
-				twentyseventeen_edit_link();
-			};
+				if ( is_single() ) {
+					twentyseventeen_posted_on();
+				} else {
+					echo twentyseventeen_time_link();
+					twentyseventeen_edit_link();
+				};
 			echo '</div><!-- .entry-meta -->';
 		};
 
@@ -41,36 +41,34 @@
 		?>
 	</header><!-- .entry-header -->
 
-	<?php if ( '' !== get_the_post_thumbnail()) : ?>
+	<?php if ( '' !== get_the_post_thumbnail() && ! is_single() ) : ?>
 		<div class="post-thumbnail">
-			<?php if (is_single()): ?>
+			<a href="<?php the_permalink(); ?>">
 				<?php the_post_thumbnail( 'twentyseventeen-featured-image' ); ?>
-			<?php else: ?>
-				<a href="<?php the_permalink(); ?>">
-					<?php the_post_thumbnail( 'twentyseventeen-featured-image' ); ?>
-				</a>
-			<?php endif; ?>
+			</a>
 		</div><!-- .post-thumbnail -->
 	<?php endif; ?>
 
 	<div class="entry-content">
 		<?php
+		if (is_single) {
+			$fewsurl = get_post_meta(get_the_ID(), 'flatearth.ws', true);
+			if ($fewsurl) {
+				echo "<p class='english-version'><a href='".htmlspecialchars($fewsurl)."'>(English version of this article)</a></p>";
+			}
+		}
 		/* translators: %s: Name of current post */
-		the_content(
-			sprintf(
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
-				get_the_title()
-			)
-		);
+		the_content( sprintf(
+			__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
+			get_the_title()
+		) );
 
-		wp_link_pages(
-			array(
-				'before'      => '<div class="page-links">' . __( 'Pages:', 'twentyseventeen' ),
-				'after'       => '</div>',
-				'link_before' => '<span class="page-number">',
-				'link_after'  => '</span>',
-			)
-		);
+		wp_link_pages( array(
+			'before'      => '<div class="page-links">' . __( 'Pages:', 'twentyseventeen' ),
+			'after'       => '</div>',
+			'link_before' => '<span class="page-number">',
+			'link_after'  => '</span>',
+		) );
 		?>
 	</div><!-- .entry-content -->
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying posts
+ * Template part for displaying video posts
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -14,9 +14,9 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php
-	if ( is_sticky() && is_home() ) :
+	if ( is_sticky() && is_home() ) {
 		echo twentyseventeen_get_svg( array( 'icon' => 'thumb-tack' ) );
-	endif;
+	}
 	?>
 	<header class="entry-header">
 		<?php
@@ -27,8 +27,8 @@
 			} else {
 				echo twentyseventeen_time_link();
 				twentyseventeen_edit_link();
-			};
-			echo '</div><!-- .entry-meta -->';
+			}
+				echo '</div><!-- .entry-meta -->';
 		};
 
 		if ( is_single() ) {
@@ -41,7 +41,17 @@
 		?>
 	</header><!-- .entry-header -->
 
-	<?php if ( '' !== get_the_post_thumbnail()) : ?>
+	<?php
+		$content = apply_filters( 'the_content', get_the_content() );
+		$video   = false;
+
+		// Only get video from the content if a playlist isn't present.
+	if ( false === strpos( $content, 'wp-playlist-script' ) ) {
+		$video = get_media_embedded_in_content( $content, array( 'video', 'object', 'embed', 'iframe' ) );
+	}
+	?>
+
+	<?php if ( '' !== get_the_post_thumbnail() && empty( $video ) ) : ?>
 		<div class="post-thumbnail">
 			<?php if (is_single()): ?>
 				<?php the_post_thumbnail( 'twentyseventeen-featured-image' ); ?>
@@ -54,24 +64,42 @@
 	<?php endif; ?>
 
 	<div class="entry-content">
-		<?php
-		/* translators: %s: Name of current post */
-		the_content(
-			sprintf(
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
-				get_the_title()
-			)
-		);
 
-		wp_link_pages(
-			array(
-				'before'      => '<div class="page-links">' . __( 'Pages:', 'twentyseventeen' ),
-				'after'       => '</div>',
-				'link_before' => '<span class="page-number">',
-				'link_after'  => '</span>',
-			)
-		);
+		<?php
+		if ( ! is_single() ) {
+
+			// If not a single post, highlight the video file.
+			if ( ! empty( $video ) ) {
+				foreach ( $video as $video_html ) {
+					echo '<div class="entry-video">';
+						echo $video_html;
+					echo '</div>';
+				}
+			};
+
+		};
+
+		if ( is_single() || empty( $video ) ) {
+
+			/* translators: %s: Name of current post */
+			the_content(
+				sprintf(
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
+					get_the_title()
+				)
+			);
+
+			wp_link_pages(
+				array(
+					'before'      => '<div class="page-links">' . __( 'Pages:', 'twentyseventeen' ),
+					'after'       => '</div>',
+					'link_before' => '<span class="page-number">',
+					'link_after'  => '</span>',
+				)
+			);
+		};
 		?>
+
 	</div><!-- .entry-content -->
 
 	<?php
