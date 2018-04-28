@@ -57,6 +57,11 @@ function mb_scripts(){
 }
 add_action('wp_enqueue_scripts','mb_scripts',11);
 
+function twentyseventeen_posted_on() {
+}
+function twentyseventeen_time_link() {
+}
+
 
 // change thumbnail size
 function jetpackchange_image_size ( $thumbnail_size ) {
