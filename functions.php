@@ -24,6 +24,14 @@ function bumidatarid_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'bumidatarid_body_classes' );
 
+function bumidatarid_seo_conflicted_themes() {
+	return [
+		'bumidatar-child' => 1,
+		'twentyseventeen' => 1,
+	];
+}
+#add_filter('jetpack_seo_meta_tags_conflicted_themes', 'bumidatarid_seo_conflicted_themes');
+
 // change thumbnail size
 function jetpackchange_image_size ( $thumbnail_size ) {
  $thumbnail_size['width'] = 300;
