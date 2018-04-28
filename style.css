@@ -104,6 +104,11 @@ pre.prettyprinted {
 	margin-right: -2em;
 }
 
+.page-title {
+	font-size: 1.3rem;
+	font-weight: 700;
+}
+
 @media screen and (min-width: 48em) {
 .navigation-top {
 ￼    bottom: 0;
@@ -129,6 +134,10 @@ padding: 0.25em 1.25em;
 .post-thumbnail {
 	margin-left: 0;
 	margin-right: 0;
+}
+
+.site-content {
+	padding: 1.5em 0 0;
 }
 
 }
