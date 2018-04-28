@@ -19,7 +19,11 @@ Anda bisa menambahkan CSS di sini.
 Klik ikon bantuan di atas untuk info lebih lanjut.
 */
 
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:400,400i,700,700i');
+html {
+	font-size: 115%;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
 
 body,
 button,
@@ -28,14 +32,41 @@ select,
 textarea {
 	color: #333;
 	font-family: "Open Sans", "Helvetica Neue", helvetica, arial, sans-serif;
-	font-size: 17px;
+	font-size: 15px;
+	font-size: 0.9375rem;
 	font-weight: 400;
 	line-height: 1.66;
 }
 
-.site-title {
+/* Placeholder text color -- selectors need to be separate to work. */
+::-webkit-input-placeholder {
+        color: #333;
+        font-family: "Open Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+}
+
+:-moz-placeholder {
+        color: #333;
+        font-family: "Open Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+}
+
+::-moz-placeholder {
+        color: #333;
+        font-family: "Open Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+        opacity: 1;
+        /* Since FF19 lowers the opacity of the placeholder by default */
+}
+
+:-ms-input-placeholder {
+        color: #333;
+        font-family: "Open Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+}
+
+
+.site-title, .site-description {
 	text-transform: none;
 	letter-spacing: 0;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
 }
 
 h1,

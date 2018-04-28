@@ -32,6 +32,31 @@ function bumidatarid_seo_conflicted_themes() {
 }
 #add_filter('jetpack_seo_meta_tags_conflicted_themes', 'bumidatarid_seo_conflicted_themes');
 
+
+function bumidatar_fonts_url() {
+    $fonts_url = '';
+    $font_families = array();
+
+    $font_families[] = 'Lato:300,700';
+    $font_families[] = 'Open Sans::400,400i,700,700i';
+
+    $query_args = array(
+        'family' => urlencode( implode( '|', $font_families ) ),
+        'subset' => urlencode( 'latin,latin-ext' ),
+    );
+
+    $fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+
+    return esc_url_raw( $fonts_url );
+}
+
+function mb_scripts(){
+    wp_dequeue_style( 'twentyseventeen-fonts');
+    wp_enqueue_style( 'bumidatar-fonts', bumidatar_fonts_url(), array(), null );
+}
+add_action('wp_enqueue_scripts','mb_scripts',11);
+
+
 // change thumbnail size
 function jetpackchange_image_size ( $thumbnail_size ) {
  $thumbnail_size['width'] = 300;
