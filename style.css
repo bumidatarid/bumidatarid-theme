@@ -98,3 +98,18 @@ pre.prettyprinted {
 	background-color: #333 !important;
 }
 
+
+@media screen and (min-width: 48em) {
+.navigation-top {
+￼    bottom: 0;
+     font-family: "Open Sans Condensed";
+     font-weight: 300;
+￼    font-size: 12px;
+￼    font-size: 0.875rem;
+￼    left: 0;
+￼    position: absolute;
+￼    right: 0;
+￼    width: 100%;
+￼    z-index: 3;
+}
+}
