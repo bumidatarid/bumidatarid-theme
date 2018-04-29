@@ -25,6 +25,7 @@
 <body <?php body_class(); ?>>
 
 <?php if ($_SERVER['HTTP_HOST'] == 'bumidatar.id'): ?>
+
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -33,7 +34,17 @@
   js.src = 'https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v2.12&appId=644901275852993&autoLogAppEvents=1';
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+
+<script >
+  window.___gcfg = {
+    lang: 'id_ID',
+    parsetags: 'onload'
+  };
+</script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+
 <?php elseif ($_SERVER['HTTP_HOST'] == 'flatearth.ws'): ?>
+
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -42,6 +53,15 @@
   js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&appId=1834575003272531&autoLogAppEvents=1';
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+
+<script >
+  window.___gcfg = {
+    lang: 'en_US',
+    parsetags: 'onload'
+  };
+</script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+
 <?php endif; ?>
 
 <script>window.twttr = (function(d, s, id) {
