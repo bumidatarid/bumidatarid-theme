@@ -33,7 +33,7 @@
   js.src = 'https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v2.12&appId=644901275852993&autoLogAppEvents=1';
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-<? elseif ($_SERVER['HTTP_HOST'] == 'flatearth.ws'): ?>
+<?php elseif ($_SERVER['HTTP_HOST'] == 'flatearth.ws'): ?>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
