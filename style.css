@@ -5,7 +5,7 @@
  Author:       John Doe
  Author URI:   http://example.com
  Template:     bumidatar-child
- Version:      1.0.13
+ Version:      1.0.14
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
@@ -162,6 +162,15 @@ padding: 0.25em 1.25em;
 
 .site-content {
 	padding: 1.5em 0 0;
+}
+
+.navigation-top .wrap {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+h2.widget-title {
+	font-size: 0.9rem;
 }
 
 .language {
