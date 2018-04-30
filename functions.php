@@ -65,14 +65,17 @@ function twentyseventeen_time_link() {
 function bumidatar_social() {
 	if ($_SERVER['HTTP_HOST'] == 'bumidatar.id') {
 		$twitter = 'bumidatarid';
+		$fbw = 116;
 	} elseif ($_SERVER['HTTP_HOST'] == 'flatearth.ws') {
 		$twitter = 'flatearthws';
+		$fbw = 100;
 	} else {
 		$twitter = '';
+		$fbw = 0;
 	}	
 	?>
 	<div class="social">
-		<span class="facebook">
+		<span class="facebook" style="width: <?php echo $fbw ?>px">
 			<div class="fb-like" data-href="<?php the_permalink(); ?>" data-layout="button" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
 		</span>
 		<span class="twitter">
