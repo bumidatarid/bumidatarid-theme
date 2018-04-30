@@ -62,11 +62,18 @@ textarea {
 }
 
 
-.site-title, .site-description {
+.site-title {
 	text-transform: none;
 	letter-spacing: 0;
 	font-family: 'Lato', sans-serif;
 	font-weight: 700;
+}
+
+.site-description {
+	text-transform: none;
+	letter-spacing: 0;
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
 }
 
 h1,

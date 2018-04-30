@@ -37,7 +37,7 @@ function bumidatar_fonts_url() {
     $fonts_url = '';
     $font_families = array();
 
-    $font_families[] = 'Lato:300,700';
+    $font_families[] = 'Lato:300,400,700';
     $font_families[] = 'Open Sans::400,400i,700,700i';
     $font_families[] = 'Open Sans Condensed::300';
 
