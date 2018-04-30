@@ -211,3 +211,35 @@ display:block;
 margin:0.2em auto;
 }
 }
+
+
+    /* This gets Google to fall into place */
+    .social {
+        font-size: 1px;
+        margin-bottom: 1rem;
+        height: 20px;
+    }
+
+    /* This gets Facebook to fall into place */
+    .social iframe {
+        vertical-align: bottom;
+        margin: 0;
+    }
+
+    /* Set an optional width for your button wrappers */
+    .social span {
+        display: inline-block;
+        width: auto;
+	margin-right: 2em; 
+	vertical-align: bottom;
+    }
+
+    .social span.twitter {
+        margin-right: 4em;
+        width: 62px;
+    }
+
+    .social span.facebook {
+        width: 116px;
+    }
+
