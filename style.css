@@ -247,3 +247,6 @@ margin:0.2em auto;
         // width: 116px;
     }
 
+.fb-like {
+	display: block !important;
+}
