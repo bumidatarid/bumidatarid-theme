@@ -67,7 +67,7 @@ function bumidatar_social() {
 		$twitter = 'bumidatarid';
 		$fbw = 116;
 	} elseif ($_SERVER['HTTP_HOST'] == 'flatearth.ws') {
-		$twitter = 'flatearthws';
+		$twitter = 'febunk';
 		$fbw = 100;
 	} else {
 		$twitter = '';
