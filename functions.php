@@ -67,8 +67,11 @@ function bumidatar_social() {
 		$twitter = 'bumidatarid';
 		$fbw = 116;
 	} elseif ($_SERVER['HTTP_HOST'] == 'flatearth.ws') {
-		$twitter = 'febunk';
+		$twitter = 'bumidatarid';
 		$fbw = 100;
+	} elseif ($_SERVER['HTTP_HOST'] == 'terraplana.ws') {
+		$twitter = 'terraplana';
+		$fbw = 150;
 	} else {
 		$twitter = '';
 		$fbw = 0;
@@ -81,9 +84,9 @@ function bumidatar_social() {
 		<span class="twitter">
 			<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-url="<?php the_permalink(); ?>" data-via="<?php echo $twitter ?>" data-show-count="true" data-text="<?php echo esc_html(the_title(false)) ?>"></a>
 		</span>
-		<span class="google">
+		<!--<span class="google">
 			<div class="g-plusone" data-size="medium" data-href="<?php the_permalink(); ?>"></div>
-		</span>
+		</span>-->
 	</div>
 	<?php
 }
