@@ -17,6 +17,10 @@ function my_theme_enqueue_styles() {
         array( $parent_style ),
         wp_get_theme()->get('Version')
     );
+
+    if ( is_rtl() ) {
+	wp_enqueue_style( 'child-style-rtl', get_template_directory_uri() . '/rtl.css', array(), wp_get_theme()->get('Version') );
+    }	
 }
 
 function bumidatarid_body_classes( $classes ) {
