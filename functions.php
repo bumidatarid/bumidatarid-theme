@@ -69,13 +69,16 @@ function twentyseventeen_time_link() {
 function bumidatar_social() {
 	if ($_SERVER['HTTP_HOST'] == 'bumidatar.id') {
 		$twitter = 'bumidatarid';
-		$fbw = 116;
+		$fbw = 104;
 	} elseif ($_SERVER['HTTP_HOST'] == 'flatearth.ws') {
 		$twitter = 'bumidatarid';
-		$fbw = 100;
+		$fbw = 88;
 	} elseif ($_SERVER['HTTP_HOST'] == 'terraplana.ws') {
-		$twitter = 'terraplana';
-		$fbw = 150;
+		$twitter = 'terraplanaws';
+		$fbw = 140;
+	} elseif ($_SERVER['HTTP_HOST'] == 'tierraplana.ws') {
+		$twitter = 'tierraplanaws';
+		$fbw = 142;
 	} else {
 		$twitter = '';
 		$fbw = 0;
