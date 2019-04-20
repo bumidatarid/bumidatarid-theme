@@ -79,6 +79,9 @@ function bumidatar_social() {
 	} elseif ($_SERVER['HTTP_HOST'] == 'tierraplana.ws') {
 		$twitter = 'tierraplanaws';
 		$fbw = 142;
+	} elseif ($_SERVER['HTTP_HOST'] == 'xn----qmclktwpwl8jpa.xn--ngbc5azd') {
+		$twitter = 'alardhmusataha';
+		$fbw = 96;
 	} else {
 		$twitter = '';
 		$fbw = 0;

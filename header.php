@@ -105,6 +105,27 @@
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 
 
+<?php elseif ($_SERVER['HTTP_HOST'] == 'xn----qmclktwpwl8jpa.xn--ngbc5azd'): ?>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.async = true;
+  js.src = 'https://connect.facebook.net/ar_AR/sdk.js#xfbml=1&version=v2.12&appId=298177131097185&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script >
+  window.___gcfg = {
+    lang: 'ar_AR',
+    parsetags: 'onload'
+  };
+</script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+
+
 <?php endif; ?>
 
 <script>window.twttr = (function(d, s, id) {
