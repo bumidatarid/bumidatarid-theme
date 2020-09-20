@@ -66,42 +66,6 @@ function twentyseventeen_posted_on() {
 function twentyseventeen_time_link() {
 }
 
-function bumidatar_social() {
-	if ($_SERVER['HTTP_HOST'] == 'bumidatar.id') {
-		$twitter = 'bumidatarid';
-		$fbw = 104;
-	} elseif ($_SERVER['HTTP_HOST'] == 'flatearth.ws') {
-		$twitter = 'bumidatarid';
-		$fbw = 88;
-	} elseif ($_SERVER['HTTP_HOST'] == 'terraplana.ws') {
-		$twitter = 'terraplanaws';
-		$fbw = 140;
-	} elseif ($_SERVER['HTTP_HOST'] == 'tierraplana.ws') {
-		$twitter = 'tierraplanaws';
-		$fbw = 142;
-	} elseif ($_SERVER['HTTP_HOST'] == 'xn----qmclktwpwl8jpa.xn--ngbc5azd') {
-		$twitter = 'alardhmusataha';
-		$fbw = 96;
-	} else {
-		$twitter = '';
-		$fbw = 0;
-	}	
-	?>
-	<div class="social">
-		<span class="facebook" style="width: <?php echo $fbw ?>px">
-			<div class="fb-like" data-href="<?php the_permalink(); ?>" data-layout="button" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
-		</span>
-		<span class="twitter">
-			<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-url="<?php the_permalink(); ?>" data-via="<?php echo $twitter ?>" data-show-count="true" data-text="<?php echo esc_html(the_title(false)) ?>"></a>
-		</span>
-		<!--<span class="google">
-			<div class="g-plusone" data-size="medium" data-href="<?php the_permalink(); ?>"></div>
-		</span>-->
-	</div>
-	<?php
-}
-
-
 // change thumbnail size
 function jetpackchange_image_size ( $thumbnail_size ) {
  $thumbnail_size['width'] = 300;

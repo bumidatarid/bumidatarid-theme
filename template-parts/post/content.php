@@ -53,8 +53,6 @@
 		</div><!-- .post-thumbnail -->
 	<?php endif; ?>
 
-	<?php bumidatar_social() ?>
-
 	<div class="entry-content">
 		<?php
 		/* translators: %s: Name of current post */
